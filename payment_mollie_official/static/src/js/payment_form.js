@@ -170,6 +170,8 @@ odoo.define('mollie.payment.form', function (require) {
                         if (cardToken) {
                             this.cardToken = cardToken;
                             return _super();
+                        } else {
+			    setTimeout(() => _super(), 2000);
                         }
                     });
             } else {
